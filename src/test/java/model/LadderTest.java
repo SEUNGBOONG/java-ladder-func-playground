@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LadderTest {
-    
+
     @Test
     void 사다리_정상_생성_테스트() {
 

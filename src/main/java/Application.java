@@ -1,10 +1,12 @@
 import controller.Controller;
 
+import java.io.IOException;
+
 public class Application {
 
-    static Controller controller = new Controller();
+    private static final Controller ladder = new Controller();
 
-    public static void main(String[] args) {
-        controller.run();
+    public static void main(String[] args) throws IOException {
+        ladder.run();
     }
 }

@@ -4,25 +4,22 @@ import java.util.List;
 
 public class Ladder {
 
-    private final List<Lines> rowLines;
-    private final Height height;
+    private final RowLines rowLines;
 
-    public Ladder(final List<Lines> rowLines, final Height height) {
+    private Ladder(final RowLines rowLines) {
         this.rowLines = rowLines;
-        this.height = height;
     }
 
     public static Ladder of(final int heightValue, final int width) {
-        Height height = Height.from(heightValue);
-        RowLines rowLines = RowLines.of(height.getHeight(), width);
-        return new Ladder(rowLines.getRowLines(), height);
+        RowLines rowLines = RowLines.of(heightValue, width);
+        return new Ladder(rowLines);
     }
 
     public List<Lines> getRowLines() {
-        return rowLines;
+        return rowLines.getRowLines();
     }
 
     public Height getHeight() {
-        return height;
+        return rowLines.getHeight();
     }
 }
